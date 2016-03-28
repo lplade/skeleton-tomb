@@ -1,6 +1,6 @@
 #!/bin/bash
 # Requires:
-# sox, libsox-fmt-mp3
+# sox, libsox-fmt-mp3, lame, oggenc
 #
 # Convert source file to AIFF before using. MP3 gets sync errors
 AMBIENT="audio_src/Silent-Crypt_-3db.aiff"
@@ -14,22 +14,23 @@ ARISE="audio_src/arise2.aiff"
 
 # Sum of trim start and trim duration cannot exceed length of AMBIENT
 
-sox -V3 "|sox $AMBIENT -p trim 0 5" $ARISE -C -4.2 audio/005_day.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 5 10" $ARISE -C -4.2 audio/010_week.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 15 20" $ARISE -C -4.2 audio/020_month.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 35 40" $ARISE -C -4.2 audio/040_year.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 75 60" $ARISE -C -4.2 audio/060_decade.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 135 120" $ARISE -C -4.2 audio/120_century.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 255 180" $ARISE -C -4.2 audio/180_centuries.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 0 240" $ARISE -C -4.2 audio/240_millenium.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 240 300" $ARISE -C -4.2 audio/300_age.mp3 splice
-sox -V3 "|sox $AMBIENT -p trim 540 360" $ARISE -C -4.2 audio/360_epoch.mp3 splice
+sox -V3 "|sox $AMBIENT -p trim 0 5" $ARISE -b 16 audio/005_day.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 5 10" $ARISE -b 16 audio/010_week.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 15 20" $ARISE -b 16 audio/020_month.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 35 40" $ARISE -b 16 audio/040_year.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 75 60" $ARISE -b 16 audio/060_decade.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 135 120" $ARISE -b 16 audio/120_century.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 255 180" $ARISE -b 16 audio/180_centuries.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 0 240" $ARISE -b 16 audio/240_millenium.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 240 300" $ARISE -b 16 audio/300_age.aiff splice
+sox -V3 "|sox $AMBIENT -p trim 540 360" $ARISE -b 16 audio/360_epoch.aiff splice
 
-#for i in audio/*.aiff
-#do
-#  lame "$i"
-#done
+for i in audio/*.aiff
+do
+  lame -V 4 -q 2 "$i"
+  oggenc "$i"
+done
 
-#rm audio/*.aiff
+rm audio/*.aiff
 
 exit 0
