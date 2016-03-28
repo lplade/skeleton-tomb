@@ -1,6 +1,8 @@
 # Skeleton Tomb
 Soundboard for Skeletons RPG
 
+http://bullypulpitgames.com/games/the-skeletons/
+
 Still sorting out CC credits for audio files. You can generate your own.
 
 You need a longish (at least 15 min) ambient sound file and a sample saying "Arise and protect the tomb, skeletal guardians!" in the audio_src directory.

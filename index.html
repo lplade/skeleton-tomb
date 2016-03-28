@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<div class="container">
+<div id="main_buttons" class="container">
 	<h1 class="page-header text-center">Skeleton Tomb</h1>
 	<div class="row">
 		<div class="col-sm-3"></div>
@@ -125,6 +125,12 @@
 		<div class="col-sm-3"></div>
 	</div>
 </div>
+<div id="playback" class="container" hidden="hidden">
+	Playing a sound...
+	<audio>
+		Sorry, your browser does not support HTML5 audio playback.
+	</audio>
+</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -132,5 +138,9 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/playback.js"></script>
 </body>
+<noscript>
+	<p>Sorry, this site requires JavaScript support.</p>
+</noscript>
 </html>
