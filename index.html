@@ -1,147 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html(lang='en')>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
 	<title>Skeleton Tomb</title>
-
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script
-		src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	<link href="css/tomb.css" rel="stylesheet">
+	<!-- Bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--if lt IE 9
+	script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+	script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+	-->
+	<link href="css/tomb.css" rel="stylesheet"/>
 </head>
 <body>
-
+<!--audio playback tags-->
+<div id="players" class="container">
+	<audio id="005_day" preload="auto">
+		<source src="audio/005_day.mp3"/>
+		<source src="audio/005_day.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="010_week" preload="auto">
+		<source src="audio/010_week.mp3"/>
+		<source src="audio/010_week.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="020_month" preload="auto">
+		<source src="audio/020_month.mp3"/>
+		<source src="audio/020_month.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="040_year" preload="auto">
+		<source src="audio/040_year.mp3"/>
+		<source src="audio/040_year.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="060_decade" preload="auto">
+		<source src="audio/060_decade.mp3"/>
+		<source src="audio/060_decade.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="120_century" preload="auto">
+		<source src="audio/120_century.mp3"/>
+		<source src="audio/120_century.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="180_centuries" preload="auto">
+		<source src="audio/180_centuries.mp3"/>
+		<source src="audio/180_centuries.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="240_millenium" preload="auto">
+		<source src="audio/240_millenium.mp3"/>
+		<source src="audio/240_millenium.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="300_age" preload="auto">
+		<source src="audio/300_age.mp3"/>
+		<source src="audio/300_age.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="360_epoch" preload="auto">
+		<source src="audio/360_epoch.mp3"/>
+		<source src="audio/360_epoch.ogg"/>
+		Your browser does not support the audio element.
+	</audio>
+</div>
+<!--Buttons-->
 <div id="main_buttons" class="container">
 	<h1 class="page-header text-center">Skeleton Tomb</h1>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="005_day" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				A day <br/><i>(5 sec.)</i>
-			</button>
+			<button onclick="document.getElementById('005_day').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">A day<br/><i>(5
+				seconds)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="010_week" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				A week <br/><i>(10 sec.)</i>
-			</button>
+			<button onclick="document.getElementById('010_week').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">A
+				week<br/><i>(10 seconds)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="020_month" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				A month <br/><i>(20 sec.)</i>
-			</button>
-		</div>
-		<div class="col-sm-3">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-3"></div>
-		<div class="col-sm-6">
-			<button id="040_year" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				A year <br/><i>(40 sec.)</i>
-			</button>
+			<button onclick="document.getElementById('020_month').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">A
+				month<br/><i>(20 seconds)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="060_decade" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				A decade <br/><i>(1 min.)</i>
-			</button>
+			<button onclick="document.getElementById('040_year').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">A
+				year<br/><i>(40 seconds)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="120_century" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				A century <br/><i>(2 min.)</i>
-			</button>
+			<button onclick="document.getElementById('060_decade').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">A
+				decade<br/><i>(1 minute)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="180_centuries" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				Centuries <br/><i>(3 min.)</i>
-			</button>
+			<button onclick="document.getElementById('120_century').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">A
+				century<br/><i>(2 minutes)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="240_millenium" type="button"
+			<button onclick="document.getElementById('180_centuries').play()"
 			        class="btn btn-default btn-large btn-block btn-danger">
-				A millenium <br/><i>(4 min.)</i>
-			</button>
+				Centuries<br/><i>(3 minutes)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="300_age" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				An age <br/><i>(5 min.)</i>
-			</button>
+			<button onclick="document.getElementById('240_millenium').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">A
+				millenium<br/><i>(4 minutes)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<button id="360_epoch" type="button"
-			        class="btn btn-default btn-large btn-block btn-danger">
-				An epoch <br/><i>(6 min.)</i>
-			</button>
+			<button onclick="document.getElementById('300_age').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">An
+				age<br/><i>(5 minutes)</i></button>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<button onclick="document.getElementById('360_epoch').play()"
+			        class="btn btn-default btn-large btn-block btn-danger">An
+				epoch<br/><i>(6 minutes)</i></button>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 </div>
-<div id="playback" class="container" hidden="hidden">
-	Playing a sound...
-	<audio id="player">
-		<!-- inject audio playback here -->
-		Sorry, your browser does not support HTML5 audio playback.
-	</audio>
-</div>
-
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Include all compiled plugins (below), or include individual files as needed-->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/playback.js"></script>
+<!--script(src='js/playback.js')-->
 </body>
 <noscript>
 	<p>Sorry, this site requires JavaScript support.</p>
 </noscript>
-</html>

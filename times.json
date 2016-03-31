@@ -1,0 +1,62 @@
+[
+  {
+    "fileName":"005_day",
+    "timeWord":"A day",
+    "durLong":"5 seconds",
+    "durInt":5
+  },
+  {
+    "fileName":"010_week",
+    "timeWord":"A week",
+    "durLong":"10 seconds",
+    "durInt":10
+  },
+  {
+    "fileName":"020_month",
+    "timeWord":"A month",
+    "durLong":"20 seconds",
+    "durInt":20
+  },
+  {
+    "fileName":"040_year",
+    "timeWord":"A year",
+    "durLong":"40 seconds",
+    "durInt":40
+  },
+  {
+    "fileName":"060_decade",
+    "timeWord":"A decade",
+    "durLong":"1 minute",
+    "durInt":60
+  },
+  {
+    "fileName":"120_century",
+    "timeWord":"A century",
+    "durLong":"2 minutes",
+    "durInt":120
+  },
+  {
+    "fileName":"180_centuries",
+    "timeWord":"Centuries",
+    "durLong":"3 minutes",
+    "durInt":180
+  },
+  {
+    "fileName":"240_millenium",
+    "timeWord":"A millenium",
+    "durLong":"4 minutes",
+    "durInt":240
+  },
+  {
+    "fileName":"300_age",
+    "timeWord":"An age",
+    "durLong":"5 minutes",
+    "durInt":300
+  },
+  {
+    "fileName":"360_epoch",
+    "timeWord":"An epoch",
+    "durLong":"6 minutes",
+    "durInt":360
+  }
+]

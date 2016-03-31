@@ -14,25 +14,27 @@ head
 		script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
 	link(href='css/tomb.css', rel='stylesheet')
 body
-	- files = [ "005_day", "010_week", "020_month", "040_year", "060_decade" ]
+	include ./json.jade
 	//audio playback tags
 	#players.container
-		each filename in files
-			audio##{filename}(preload="auto")
-				source(src='audio/#{filename}.mp3')
-				source(src='audio/#{filename}.ogg')
+		each item in files
+			audio(id="#{item.fileName}" preload="auto")
+				source(src='audio/#{item.fileName}.mp3')
+				source(src='audio/#{item.fileName}.ogg')
 				| Your browser does not support the audio element.
 	//Buttons
 	#main_buttons.container
 		h1.page-header.text-center Skeleton Tomb
-		each filename in files
+		each item in files
 			.row
 				.col-sm-3
 				.col-sm-6
-					button.btn.btn-default.btn-large.btn-block.btn-danger(type='button', onclick="document.getElementByID('#{filename}').play()")
-						| A day
+					button.btn.btn-default.btn-large.btn-block.btn-danger(
+						onclick="document.getElementById('#{item.fileName}').play()"
+					)
+						| #{item.timeWord}
 						br
-						i (5 sec.)
+						i (#{item.durLong})
 				.col-sm-3
 
 
@@ -41,6 +43,6 @@ body
 	script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 	// Include all compiled plugins (below), or include individual files as needed
 	script(src='js/bootstrap.min.js')
-	script(src='js/playback.js')
+	//script(src='js/playback.js')
 noscript
 	p Sorry, this site requires JavaScript support.
