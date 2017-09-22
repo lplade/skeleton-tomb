@@ -22,8 +22,10 @@ body
 				source(src='audio/#{item.fileName}.mp3')
 				source(src='audio/#{item.fileName}.ogg')
 				| Your browser does not support the audio element.
-	//Buttons
-	#main_buttons.container
+
+	#main.container
+		//Buttons
+		#mainButtons
 		h1.page-header.text-center Skeleton Tomb
 		each item in files
 			.row
@@ -36,7 +38,48 @@ body
 						br
 						i (#{item.durLong})
 				.col-sm-3
-
+		//Credits
+		.some-vertical-space
+		#credits
+			.row
+				.col-sm-3
+				.col-sm-6
+					button.btn.btn-default(
+						role="button" type="button" data-toggle="collapse" data-target="#creditData"
+						aria-expanded="false" aria-controls="collapseCredits"
+					) Credits
+				.col-sm-3
+			.row
+				.col-sm-3
+				.col-sm-6
+					#creditData.collapse
+						.well
+							.row
+								h2 Designed for
+								p THE SKELETONS by Bully Pulpit Games
+								h2 App design & code
+								p Copyright 2017#{' '}
+									a(href="https://resume.lplade.name") l.p.lade
+								h2 Samples
+									h3
+										a(href="https://creativecommons.org/licenses/sampling+/1.0/") Creative Commons Sampling Plus 1.0 License
+									ul
+										li Zombie scratching by Crpdeth from http://freesound.org
+										li single cricket by eircom from http://freesound.org
+										li Dry Thunder3 by juskiddink from http://www.freesound.org/
+										li spooky_wind.wav by limetoe //freesound.org
+										li Creak by n3xia from http://freesound.org
+										li Ghostbreath1 by nageor
+										li Mouse Squeaking by ProFX
+										li Rise and protect the tomb by l.p.lade
+									h3
+										a(href="https://creativecommons.org/publicdomain/zero/1.0/") Creative Commons 0
+									ul
+										li Stingers 001.wav by rodincoil from http://freesound.org
+									h3 Snapsound.com license
+									ul
+										li water dripping var.2 reverb by soundsnap.com
+				.col-sm-3
 
 
 	// jQuery (necessary for Bootstrap's JavaScript plugins)
