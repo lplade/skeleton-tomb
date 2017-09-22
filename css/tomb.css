@@ -2,3 +2,12 @@ button {
 	margin-bottom: 5px;
 	margin-top: 5px;
 }
+
+.some-vertical-space {
+	width: 100%;
+	min-height: 1px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	position: relative;
+}
