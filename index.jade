@@ -18,7 +18,7 @@ body
 	//audio playback tags
 	#players.container
 		each item in files
-			audio(id="#{item.fileName}" preload="auto")
+			audio(id='#{item.fileName}' preload='auto')
 				source(src='audio/#{item.fileName}.mp3')
 				source(src='audio/#{item.fileName}.ogg')
 				| Your browser does not support the audio element.
