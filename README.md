@@ -3,7 +3,7 @@ Soundboard for Skeletons RPG
 
 http://bullypulpitgames.com/games/the-skeletons/
 
-Don't edit the html directly. Edit the Jade file, then run `pug -P index.jade`
+Don't edit the html directly. Edit the Pug file, then run `pug -P index.pug`
 
 https://pugjs.org/
 
