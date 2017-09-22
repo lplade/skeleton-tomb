@@ -25,7 +25,7 @@ crashlytics-build.properties
 .Trash-*
 # Created by .ignore support plugin (hsz.mobi)
 
-### Local-only files - not ready for distribution
+### Local-only files
 #audio/
 audio_src/
 temp.aiff
