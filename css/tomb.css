@@ -3,6 +3,10 @@ button {
 	margin-top: 5px;
 }
 
+h1 {
+	font-family: 'Piedra', cursive;
+}
+
 .some-vertical-space {
 	width: 100%;
 	min-height: 1px;
